@@ -1,0 +1,722 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Subhaya Foundation
+</title><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="stylesheet" type="text/css" href="css/stylesheet1.css" /><link rel="stylesheet" type="text/css" href="css/style.css" /><link rel="stylesheet" type="text/css" href="css/header_style.css" /><link rel="stylesheet" type="text/css" href="css/widgets.css" /><link rel="stylesheet" type="text/css" href="css/columns.css" /><link rel="stylesheet" type="text/css" href="css/responsive.css" /><link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" /><link rel="stylesheet" type="text/css" href="css/usquare_style.css" /><link rel="stylesheet" type="text/css" href="css/usquare_products_style.css" /><link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" /><link rel="stylesheet" type="text/css" href="css/jcarousel.css" /><link rel="stylesheet" type="text/css" href="css/marquee.css" /><link rel="shortcut icon" type="image/x-icon" href="images/faviicon.png" />
+   
+    <!--[if IE 9]>
+	<link rel="stylesheet" type="text/css" href="style_IE9.css" />
+<![endif]-->
+    <!--[if lt IE 9]><LINK 
+rel=stylesheet type=text/css href="Naik_files/style_IE.css"><![endif]-->
+    <link rel="shortcut icon" href="images/fev.ico" type="image/x-icon" />
+    <script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.color.js"></script>
+    <script type="text/javascript" src="js/ie.html5.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/sidebar.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+    <script src="js/jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/jquery.usquare.js"></script>
+    <script>
+        (function ($) {
+            $(document).ready(function () {
+
+                $(".usquare_module_wrapper").uSquare();
+                $('.jcarousel-skin-tango').jcarousel();
+
+            });
+        })(jQuery);
+    </script>
+    <link rel="stylesheet" href="css/colorbox.css" />
+    <script type="text/javascript" src=""></script>
+    <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Examples of how to assign the Colorbox event to elements
+            $(".vimeo").colorbox({ iframe: true, innerWidth: 500, innerHeight: 409 });
+
+        });
+    </script>
+    <!--<SCRIPT type=text/javascript>  
+    $(document).ready(function() {  
+        $.colorbox({href:'http://player.vimeo.com/video/64758967?byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1', iframe:true, innerWidth:700, innerHeight:509});  
+    });  
+</SCRIPT>-->
+    <link rel="stylesheet" type="text/css" href="css/popup.css" />
+    <!--<script type="text/javascript" src="js/jquery.min.js"></script>
+-->
+    <script type="text/javascript" src="js/popup.js"></script>
+    <meta name="GENERATOR" content="MSHTML 8.00.7600.17267" />
+    <style>
+
+.tickercontainer { 
+// border: 1px solid #000;
+//max-width: 92%; 
+height: 27px; 
+margin: 0; 
+padding: 0;
+overflow: hidden; 
+}
+.tickercontainer .mask { /* that serves as a mask. so you get a sort of padding both left and right */
+position: relative;
+left: 70px;
+top: 0px;
+width: 92%;
+overflow: hidden;
+}
+ul.newsticker { /* that's your list */
+position: relative;
+left: 92%;
+list-style-type: none;
+margin: 0;
+padding: 0;
+
+}
+ul.newsticker li {
+float: left; /* important: display inline gives incorrect results when you check for elem's width */
+margin: 0;
+padding: 0;
+}
+ul.newsticker a {
+white-space: nowrap;
+padding: 0;
+color: #000;
+margin: 0 5px 0 0;
+font-size:14px;
+} 
+ul.newsticker span {
+margin: 0 10px 0 0;
+} 
+
+</style>
+    <script>
+        jQuery(function () {
+            jQuery('ul#ticker01').liScroll();
+        });
+        jQuery.fn.liScroll = function (settings) {
+            settings = jQuery.extend({ travelocity: 0.07 }, settings);
+            return this.each(function () {
+                var $strip = jQuery(this);
+                $strip.addClass('newsticker');
+                var stripWidth = 1;
+                $strip.find('li').each(function (i) {
+                    stripWidth += jQuery(this, i).outerWidth(true);
+                });
+                var $mask = $strip.wrap('<div class=\'mask\'></div>');
+                var $tickercontainer = $strip.parent().wrap('<div class=\'tickercontainer\'></div>');
+                var containerWidth = $strip.parent().parent().width();
+                $strip.width(stripWidth);
+                var totalTravel = stripWidth + containerWidth;
+                var defTiming = totalTravel / settings.travelocity;
+                function scrollnews(spazio, tempo) {
+                    $strip.animate({ left: '-=' + spazio }, tempo, 'linear', function () {
+                        $strip.css('left', containerWidth);
+                        scrollnews(totalTravel, defTiming);
+                    });
+                }
+                scrollnews(totalTravel, defTiming);
+                $strip.hover(function () {
+                    jQuery(this).stop();
+                }, function () {
+                    var offset = jQuery(this).offset();
+                    var residualSpace = offset.left + stripWidth;
+                    var residualTime = residualSpace / settings.travelocity;
+                    scrollnews(residualSpace, residualTime);
+                });
+            });
+        };
+        //@ sourceURL=pen.js
+    </script>
+</head>
+<body onload="openOffersDialog();">
+       <div  style="right:0px;top:200px; position:fixed;">
+             <a href="How_to_donate.aspx" class="d_logo"><img src="images/donate2.png"></a>
+      </div>
+    <form method="post" action="./" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMDc5MzM5OTIPZBYCAgMPZBYCAgEPFgIeBFRleHQF9AU8dWwgaWQ9J3RpY2tlcjAxJz48bGk+PGEgaHJlZj0naHR0cDovL2FiaGF5YWZvdW5kYXRpb24ub3JnL05ld3MuYXNweCc+VGhhbmsgeW91IFpldGEgZm9yIGdyYW50aW5nIGZ1bmRzIHRvd2FyZHMgYWJoYXlhIEh1bnQgdGhlIHN1bW1lcjwvYT48c3Bhbj58fDwvc3Bhbj48L2xpPjxsaT48YSBocmVmPSdodHRwOi8vYWJoYXlhZm91bmRhdGlvbi5vcmcvTmV3cy5hc3B4Jz5XZSBwcm9mdXNlbHkgdGhhbmsgVW5pbWVkIEhlYWx0aGNhcmUgUHZ0IEx0ZCwgSHlkZXJhYmFkIGZvciB0aGVpciBnZW5lcm91cyBDU1IgRnVuZCB0b3dhcmRzIEVkdWNhcmUgcHJvamVjdHM8L2E+PHNwYW4+fHw8L3NwYW4+PC9saT48bGk+PGEgaHJlZj0naHR0cDovL2FiaGF5YWZvdW5kYXRpb24ub3JnL05ld3MuYXNweCc+V2UgUHJvZnVzZWx5IHRoYW5rIEBTaW1wbGlmeSBXb3JrZm9yY2UgUHZ0IEx0ZCBmb3IgdGhlaXIgZ2VuZXJvdXMgQ1NSIEdyYW50PC9hPjxzcGFuPnx8PC9zcGFuPjwvbGk+PGxpPjxhIGhyZWY9J2h0dHA6Ly9hYmhheWFmb3VuZGF0aW9uLm9yZy9OZXdzLmFzcHgnPlRoYW5rIHlvdSBNIFJhbW1vaGFuYSBSYW8gZm9yIHRoZSBraW5kIGFuZCBjb250aW51b3VzIERvbmF0aW9uPC9hPjxzcGFuPnx8PC9zcGFuPjwvbGk+PGxpPjxhIGhyZWY9J2h0dHA6Ly9hYmhheWFmb3VuZGF0aW9uLm9yZy9OZXdzLmFzcHgnPkV1cm9mbGV4IGdyYW50ZWQgUlMuIDU3LDUwLDAwMCBmb3IgQ1NSIEZ1bmRzPC9hPjxzcGFuPnx8PC9zcGFuPjwvbGk+PC91bD5kZLgkb43mmLs+sH63SoX0kuNYAcBGopzsd/oMiykDXRXu" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90059987" />
+</div>
+    <div>
+        <div id="wrapper">
+            <!--<div id="overlay" class="overlay"></div>
+<div id="boxpopup" class="box">
+
+	<a onclick="closeOffersDialog('boxpopup');" class="boxclose"></a>
+	<div id="content1">
+    <img src="images/popupbg.jpg"> 
+    </div>
+  <div style="clear:both"> </div>  
+</div>
+-->
+        </div>
+        <div id="content">
+            <header>
+            <DIV class="header_wrapper">
+                 
+               <a href="Index.aspx"><IMG class=logo alt=logo src="images/logo.png"></a>
+              
+              <DIV id="menu_wrapper"><SPAN class=menu_title>MENU</SPAN>
+                <DIV class="menu_arrow"></DIV>
+                   
+                <UL class="main_menu">
+                  <LI><A href="https://Subhayafoundation.production.nslhub.com/login" target="_blank"><SPAN>Login</SPAN>
+                  <SPAN class="menu_background"></SPAN></A> </LI>
+                  <LI><A href="about_Subhaya.aspx"><SPAN>Programs</SPAN>
+                   <SPAN class="menu_background"></SPAN></A>
+                    <UL>
+                      <LI><A href="about_Subhaya.aspx"><SPAN>About Subhaya</SPAN>
+                      <SPAN class="menu_background"></SPAN></A></LI>
+                      <LI><A href="Health_care.aspx"><SPAN>Healthcare</SPAN>
+                      <SPAN class="menu_background"></SPAN></A></LI>
+                      <LI><A href="Education.aspx"><SPAN>Educare</SPAN>
+                      <SPAN class="menu_background"></SPAN></A></LI>
+                      <LI><A href="Awareness.aspx"><SPAN>Awareness</SPAN>
+                      <SPAN class="menu_background"></SPAN></A></LI>
+                      <LI><A href="Rural_development.aspx"><SPAN>Rural Development</SPAN>
+                      <SPAN class="menu_background"></SPAN></A></LI>
+                      <LI><A href="Transformation.aspx"><SPAN>Transformation</SPAN>
+                      <SPAN class="menu_background"></SPAN></A></LI>
+                      <LI><A href="Hunt_the_winter.aspx"><SPAN>Hunt the Winter</SPAN>
+                      <SPAN class="menu_background"></SPAN></A></LI>
+                      <LI><A href="http://www.Subhayahome.org/" target="_blank"><SPAN>Subhaya Home of Happiness</SPAN>
+                      <SPAN class="menu_background"></SPAN></A></LI>
+                    </UL>
+                  </LI>
+                  
+                  <LI><A href="News.aspx"><SPAN>News</SPAN>
+                   <SPAN class="menu_background"></SPAN></A>
+                    <UL>
+                      <LI><A href="News_letter.aspx" ><SPAN>News Letters</SPAN>
+                      <SPAN class="menu_background"></SPAN></A></LI>
+                      <LI><A href="Videos.aspx"><SPAN>Videos</SPAN>
+                      <SPAN class="menu_background"></SPAN></A></LI>
+                      
+                    </UL>
+                  </LI>
+                  
+                  <LI><A href="donations.aspx"><SPAN>Donation</SPAN>
+                   <SPAN class="menu_background"></SPAN></A>
+                    <UL>
+                      <LI><A href="How_to_donate.aspx"><SPAN>How to Donate</SPAN>
+                      <SPAN class="menu_background"></SPAN></A></LI>
+                      <LI><A href="How_to_Volunteer.aspx"><SPAN>How to Volunteer</SPAN>
+                      <SPAN class="menu_background"></SPAN></A></LI>
+                    </UL>
+                  </LI>
+                  
+                  <LI><A href="ContactUs.aspx"><SPAN>Contact Us</SPAN>
+                  <SPAN class="menu_background"></SPAN></A> </LI>
+                </UL>
+                
+                
+           
+                <DIV class=clear></DIV>
+              </DIV>
+              <div class="time-date">
+                      <iframe width="285" height="18" frameborder="0" src="http://free.timeanddate.com/clock/i10pxtk3/n438/tt0/td1"></iframe>
+              </div>
+              <!-- menu_wrapper --></DIV>
+            <!-- header_wrapper --></header>
+            <!--<H2 class="separator_h2"></H2>-->
+            <div class="content">
+                <div class="container">
+                    <div class="marquee-[sibling marq">
+                        <h4>
+                            News</h4>
+                    </div>
+                    <div class="news_feed">
+                    <ul id='ticker01'><li><a href='http://Subhayafoundation.org/News.aspx'>Thank you Zeta for granting funds towards Subhaya Hunt the summer</a><span>||</span></li><li><a href='http://Subhayafoundation.org/News.aspx'>We profusely thank Unimed Healthcare Pvt Ltd, Hyderabad for their generous CSR Fund towards Educare projects</a><span>||</span></li><li><a href='http://Subhayafoundation.org/News.aspx'>We Profusely thank @Simplify Workforce Pvt Ltd for their generous CSR Grant</a><span>||</span></li><li><a href='http://Subhayafoundation.org/News.aspx'>Thank you M Rammohana Rao for the kind and continuous Donation</a><span>||</span></li><li><a href='http://Subhayafoundation.org/News.aspx'>Euroflex granted RS. 57,50,000 for CSR Funds</a><span>||</span></li></ul>
+                        
+                    </div>
+                    <!--<marquee onMouseOver='this.stop();' OnMouseOut='this.start();' > 
+                   Subhaya Foundation Subhaya Foundation				
+                   Subhaya Foundation Subhaya Foundation				
+                   Subhaya Foundation Subhaya Foundation				
+                   Subhaya Foundation Subhaya Foundation	
+</marquee>			
+-->
+                </div>
+            </div>
+            <div class="usquare_module_wrapper usquare_products_style">
+                <div class="usquare_module_shade">
+                </div>
+                <!-- section 1 -->
+                <div class="usquare_block">
+                    <img class="usquare_square" alt="" src="images/abt-Subhaya.jpg">
+                    <!--<IMG class=usquare_arrow alt=arrow src="images/z-logo.png"> 
+-->
+                    <div class="usquare_square usquare_square_bg1">
+                        <div class="usquare_square_text_wrapper">
+                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
+                            <div class="clear">
+                            </div>
+                            <h2 class="h_t1" style="left:4px !important">
+                                About Subhaya</h2>
+                            <span></span>
+                            <div class="clear">
+                            </div>
+                        </div>
+                        <!-- usquare_square_wrapper -->
+                    </div>
+                    <!--div    usquare_square -->
+                    <div class="display-none usquare_block_extended usquare_square_bg1">
+                        <a class="close" href="#">
+                            <img alt="close" src="images/close.png"></a>
+                        <ul class="social_background">
+                            <li><a href="#">
+                                <img alt="social" src="images/social-fb.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-tw.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-in.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-pint.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-yah.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-dig.png"></a></li>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                        <span class="bold">info:</span>
+                        <div class="usquare_about1">
+                            The most beautiful image in the world is that of a genuine smile, a smile that naturally
+                            occurs in someone when we minimize their pain through our little deeds of selfless
+                            support and kindness. This is the precept behind Subhaya: ‘alleviation of suffering!’
+                            The small acts of help many times go a long way in bringing relief to someone who
+                            is acutely suffering in some way. <a class="read_more" href="about_Subhaya.aspx">READ
+                                MORE</a>
+                        </div>
+                    </div>
+                    <!-- usquare_block_extended -->
+                </div>
+                <!-- usquare_block -->
+                <!-- section 2 -->
+                <div class="usquare_block">
+                    <img class="usquare_square" alt="" src="images/Healthcare-img.jpg">
+                    <div class="usquare_square usquare_square_bg2">
+                        <div class="usquare_square_text_wrapper">
+                            <!--<IMG class=usquare_arrow alt=arrow src="arrow.png">-->
+                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
+                            <div class="clear">
+                            </div>
+                            <h2 class="h_t2">
+                                Healthcare</h2>
+                            <span></span>
+                            <div class="clear">
+                            </div>
+                        </div>
+                        <!-- usquare_square_wrapper -->
+                    </div>
+                    <!--div    usquare_square -->
+                    <div class="display-none usquare_block_extended usquare_square_bg2">
+                        <a class="close" href="#">
+                            <img alt="close" src="images/close.png"></a>
+                        <ul class="social_background">
+                            <li><a href="#">
+                                <img src="blank.png"></a></li>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                        <span class="bold">info:</span>
+                        <div class="usquare_about1">
+                            Healthcare in India is one of the most critical areas on which maximum focus must
+                            be placed. Thousands of sick people die each day due to lack of access to proper
+                            healthcare. We believe that a more specific context of service bears more fruit
+                            rather than conduction of regular medical camps. Subhaya has been actively involved
+                            in personal care to hundreds of individuals with such debilitating conditions. <a
+                                class="read_more" href="Health_care.aspx">READ MORE</a>
+                        </div>
+                    </div>
+                    <!-- usquare_block_extended -->
+                </div>
+                <!-- usquare_block -->
+                <!-- section 3 -->
+                <div class="usquare_block" style="margin-right: 0px; float: right;">
+                    <img class="usquare_square" alt="" src="images/Educare-img.JPG">
+                    <div class="usquare_square usquare_square_bg3">
+                        <div class="usquare_square_text_wrapper">
+                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
+                            <div class="clear">
+                            </div>
+                            <h2 class="h_t3">
+                                Educare</h2>
+                            <span></span>
+                            <div class="clear">
+                            </div>
+                        </div>
+                        <!-- usquare_square_wrapper -->
+                    </div>
+                    <!--div    usquare_square -->
+                    <div class="display-none usquare_block_extended usquare_square_bg3">
+                        <a class="close" href="#">
+                            <img alt="close" src="images/close.png"></a>
+                        <ul class="social_background">
+                            <li><a href="#">
+                                <img alt="social" src="images/social-fb.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-tw.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-in.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-pint.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-yah.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-dig.png"></a></li>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                        <span class="bold">info:</span>
+                        <div class="usquare_about1">
+                            Subhaya believe that change is possible in the world only through education. In our
+                            country where still much of the rural folk and even a degree of the urban folk are
+                            illiterate, it is imperative for both the government, the corporates and in general
+                            the society to ensure that people are encouraged and motivated towards education.
+                            In pursuit of this noble objective, Subhaya now hosts nearly 400 students in two
+                            schools at Anantapur. <a class="read_more" href="Education.aspx">READ MORE</a>
+                        </div>
+                    </div>
+                    <!-- usquare_block_extended -->
+                </div>
+                <!-- usquare_block -->
+                <!-- section 4 -->
+                <div class="usquare_block">
+                    <div class="usquare_square usquare_square_bg4">
+                        <div class="usquare_square_text_wrapper">
+                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
+                            <div class="clear">
+                            </div>
+                            <h2 class="usquare_r">
+                                Awareness</h2>
+                            <span class="usquare_r"></span>
+                            <div class="clear">
+                            </div>
+                        </div>
+                        <!-- usquare_square_wrapper -->
+                    </div>
+                    <!--div    usquare_square -->
+                    <img class="usquare_square" alt="" src="images/aware.jpg">
+                    <div class="display-none usquare_block_extended usquare_square_bg4">
+                        <a class="close close_left_side" href="#">
+                            <img alt="close" src="images/close.png"></a>
+                        <ul class="social_background">
+                            <li><a href="#">
+                                <img alt="social" src="images/social-fb.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-tw.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-in.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-pint.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-yah.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-dig.png"></a></li>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                        <span class="bold">info:</span>
+                        <div class="usquare_about1">
+                            We at Subhaya foundation firmly believe that awareness is the key to social progress.
+                            We strongly advocate awareness programs right from the primary school level and
+                            to also to the urban and rural communities on various aspects of better living.
+                            We cover a wide array of subjects such as moral awareness, social awareness, health
+                            awareness, awareness on hygiene and sanitation, awareness on education. <a class="read_more"
+                                href="Awareness.aspx">READ MORE</a>
+                        </div>
+                    </div>
+                    <!-- usquare_block_extended -->
+                </div>
+                <!-- usquare_block -->
+                <!-- section 5 -->
+                <!--		<div class="usquare_block">
+						 <img src="content/usquare/products/1.jpg" class="usquare_square1" alt="" />
+-->
+                <div class="usquare_block2">
+                    <div class="usquare_square1">
+                        <img class="usquare_square1" alt="" src="images/center-logo.jpg">
+                    </div>
+                    <!--div    usquare_square -->
+                    <div class="display-none usquare_block_extended">
+                        <a class="close close_left_side" href="#">
+                            <img alt="close" src="images/close.png"></a>
+                        <ul class="social_background">
+                            <li><a href="#">
+                                <img alt="social" src="images/social-fb.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-tw.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-in.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-pint.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-yah.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-dig.png"></a></li>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                        <span class="bold">info:</span>
+                        <div class="usquare_about1">
+                            <a class="read_more" href="#">READ MORE</a>
+                        </div>
+                    </div>
+                    <!-- usquare_block_extended -->
+                </div>
+                <!-- usquare_block -->
+                <!-- section 6 -->
+                <div class="usquare_block" style="margin-right: 0px; float: right;">
+                    <div class="usquare_square usquare_square_bg6">
+                        <div class="usquare_square_text_wrapper">
+                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
+                            <div class="clear">
+                            </div>
+                            <h2 class="ab_t" style="left:8px !important">
+                                Rural Development</h2>
+                            <span class="usquare_r"></span>
+                            <div class="clear">
+                            </div>
+                        </div>
+                        <!-- usquare_square_wrapper -->
+                    </div>
+                    <!--div    usquare_square -->
+                    <img class="usquare_square" alt="" src="images/Rural-img.jpg">
+                    <div class="display-none usquare_block_extended usquare_square_bg6">
+                        <a class="close close_left_side" href="#">
+                            <img alt="close" src="images/close.png"></a>
+                        <ul class="social_background">
+                            <li><a href="#">
+                                <img alt="social" src="images/social-fb.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-tw.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-in.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-pint.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-yah.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-dig.png"></a></li>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                        <span class="bold">info:</span>
+                        <div class="usquare_about1">
+                            It is a fact that 60% of India still remains under developed and much of the confines
+                            of this lack of development are in the rural sector. Though the rural sector contributes
+                            tremendously to the vote bank and ironically is the real elector of a government,
+                            much of the sector remains neglected, with poor sanitation, poor infrastructure,
+                            poor employment, poor education and poor healthcare. <a class="read_more" href="Rural_development.aspx">
+                                READ MORE</a>
+                        </div>
+                    </div>
+                    <!-- usquare_block_extended -->
+                </div>
+                <!-- usquare_block -->
+                <!-- section 7 -->
+                <div class="usquare_block">
+                    <img class="usquare_square" alt="" src="images/transformation.jpg">
+                    <div class="usquare_square usquare_square_bg7">
+                        <div class="usquare_square_text_wrapper">
+                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
+                            <div class="clear">
+                            </div>
+                            <h2 class="h_t6">
+                                Transformation</h2>
+                            <span></span>
+                            <div class="clear">
+                            </div>
+                        </div>
+                        <!-- usquare_square_wrapper -->
+                    </div>
+                    <!--div    usquare_square -->
+                    <div class="display-none usquare_block_extended usquare_square_bg7">
+                        <a class="close" href="#">
+                            <img alt="close" src="images/close.png"></a>
+                        <ul class="social_background">
+                            <li><a href="#">
+                                <img alt="social" src="images/social-fb.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-tw.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-in.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-pint.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-yah.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-dig.png"></a></li>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                        <span class="bold">info:</span>
+                        <div class="usquare_about1">
+                            Swami Vivekananda says that true transformation of the self can happen only when
+                            you serve. Transformation is the only way one can hope to improve our society and
+                            develop the world. Subhaya advocates service through everyone, service to the sick,
+                            service to the needy, service to the destitute and service to one and all. Many
+                            of Subhaya’s volunteers are examples of transformed souls. <a class="read_more" href="Transformation.aspx">
+                                READ MORE</a>
+                        </div>
+                    </div>
+                    <!-- usquare_block_extended -->
+                </div>
+                <!-- usquare_block -->
+                <!-- section 8 -->
+                <div class="usquare_block">
+                    <img class="usquare_square" alt="" src="images/hunt-the-winter-img.JPG">
+                    <div class="usquare_square usquare_square_bg8">
+                        <div class="usquare_square_text_wrapper">
+                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
+                            <div class="clear">
+                            </div>
+                            <h2 class="h_t6">
+                                Hunt&nbsp;the&nbsp;Winter</h2>
+                            <span></span>
+                            <div class="clear">
+                            </div>
+                        </div>
+                        <!-- usquare_square_wrapper -->
+                    </div>
+                    <!--div usquare_square -->
+                    <div class="display-none usquare_block_extended usquare_square_bg8">
+                        <a class="close" href="#">
+                            <img alt="close" src="images/close.png"></a>
+                        <ul class="social_background">
+                            <li><a href="#">
+                                <img alt="social" src="images/social-fb.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-tw.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-in.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-pint.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-yah.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-dig.png"></a></li>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                        <span class="bold">info:</span>
+                        <div class="usquare_about1">
+                            As part of its mission to spread love & care for the community around, Subhaya decided
+                            to take up "Hunt the Winter" project. Our aim is to distribute 1000 blankets every
+                            year with help of kind hearted sponsors. This is a unique program, where volunteers
+                            will search for real needy sleeping on the road at mid-nights and cover them in
+                            a blanket without even disturbing their sleep. <a class="read_more" href="Hunt_the_winter.aspx">
+                                READ MORE</a>
+                        </div>
+                    </div>
+                    <!-- usquare_block_extended -->
+                </div>
+                <!-- usquare_block -->
+                <!-- section 9 -->
+                <div class="usquare_block" style="margin-right: 0px; float: right;">
+                    <img class="usquare_square" alt="" src="images/home-happyness-img.jpg">
+                    <div class="usquare_square usquare_square_bg9">
+                        <div class="usquare_square_text_wrapper">
+                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
+                            <div class="clear">
+                            </div>
+                            <h2 class="ab_t" style="left:5px !important">
+                                Subhaya Home<br>
+                                &nbsp;of&nbsp;Happiness</h2>
+                            <span></span>
+                            <div class="clear">
+                            </div>
+                        </div>
+                        <!-- usquare_square_wrapper -->
+                    </div>
+                    <!--div usquare_square -->
+                    <div class="display-none usquare_block_extended usquare_square_bg8">
+                        <a class="close" href="#">
+                            <img alt="close" src="images/close.png"></a>
+                        <ul class="social_background">
+                            <li><a href="#">
+                                <img alt="social" src="images/social-fb.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-tw.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-in.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-pint.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-yah.png"></a></li>
+                            <li><a href="#">
+                                <img alt="social" src="images/social-dig.png"></a></li>
+                        </ul>
+                        <div class="clear">
+                        </div>
+                        <span class="bold">info:</span>
+                        <div class="usquare_about1">
+                            Subhaya FOUNATION has decided to rescue and rebuild the lives of such destitutes
+                            on the streets with its aroposed Porhect 'Subhaya Home of Happiness'{aHoH} at Hyderabad.
+                            This remains to be a center of HOPE for all such people and further it will be workig
+                            on lakhs of youngsters in the villages/cities about life skills by its capacity
+                            building initiatives to increase the empolyability. <a class="read_more" href="http://www.Subhayahome.org/"
+                                target="_blank">READ MORE</a>
+                        </div>
+                    </div>
+                    <!-- usquare_block_extended -->
+                </div>
+                <!-- usquare_block -->
+                <div class="clear">
+                </div>
+            </div>
+            <!-- usquare_module_wrapper -->
+            <!--<DIV class=video>
+<P><A class=vimeo title="Naik Foundation Video" 
+href="http://player.vimeo.com/video/64758967?byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" 
+height="375" width="500">Click here to view our 
+Video</A></P></DIV>-->
+            <div class="footer">
+                <div style="text-align: center">
+                    <ul id="footer">
+                        <li><a href="about_Subhaya.aspx">About Subhaya</a></li>
+                        <li>| </li>
+                        <li><a href="History_of_Subhaya.aspx">History of Subhaya</a></li>
+                        <li>| </li>
+                        <li><a href="Health_care.aspx">Helthcare</a></li>
+                        <li>| </li>
+                        <li><a href="Education.aspx">Educare</a></li>
+                        <li>| </li>
+                        <li><a href="Awareness.aspx">Awareness</a></li>
+                        <li>| </li>
+                        <li><a href="Rural_development.aspx">Rural Infra</a></li>
+                        <li>| </li>
+                        <li><a href="Transformation.aspx">Transformation</a></li>
+                        <li>| </li>
+                        <li><a href="ContactUs.aspx">Contact Us</a></li>
+                    </ul>
+                    <div class="poweredby">
+                        <a target="_blank" href="http://www.graylogictech.com/">
+                            <img src="images/poweredby.png"></a>
+                    </div>
+                </div>
+                <!--<div>
+                <a href="#">
+<img src="http://counter6.bestfreecounterstat.com/private/freecounterstat.php?c=4e5c15513c70e98158ca25815ff3eece" border="0" title="hit counter" alt="hit counter">
+</a>
+             </div>-->
+            </div>
+            <div class="clear">
+            </div>
+        </div>
+        <!-- #content -->
+    </div>
+    </form>
+</body>
+</html>
+
