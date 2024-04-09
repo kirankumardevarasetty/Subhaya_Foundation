@@ -1,722 +1,1119 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1"><title>
-	Subhaya Foundation
-</title><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="stylesheet" type="text/css" href="css/stylesheet.css" /><link rel="stylesheet" type="text/css" href="css/stylesheet1.css" /><link rel="stylesheet" type="text/css" href="css/style.css" /><link rel="stylesheet" type="text/css" href="css/header_style.css" /><link rel="stylesheet" type="text/css" href="css/widgets.css" /><link rel="stylesheet" type="text/css" href="css/columns.css" /><link rel="stylesheet" type="text/css" href="css/responsive.css" /><link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" /><link rel="stylesheet" type="text/css" href="css/usquare_style.css" /><link rel="stylesheet" type="text/css" href="css/usquare_products_style.css" /><link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" /><link rel="stylesheet" type="text/css" href="css/jcarousel.css" /><link rel="stylesheet" type="text/css" href="css/marquee.css" /><link rel="shortcut icon" type="image/x-icon" href="images/faviicon.png" />
-   
-    <!--[if IE 9]>
-	<link rel="stylesheet" type="text/css" href="style_IE9.css" />
-<![endif]-->
-    <!--[if lt IE 9]><LINK 
-rel=stylesheet type=text/css href="Naik_files/style_IE.css"><![endif]-->
-    <link rel="shortcut icon" href="images/fev.ico" type="image/x-icon" />
-    <script type="text/javascript" src="js/jquery-1.8.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.color.js"></script>
-    <script type="text/javascript" src="js/ie.html5.js"></script>
-    <script type="text/javascript" src="js/common.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
-    <script type="text/javascript" src="js/sidebar.js"></script>
-    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/jquery.mousewheel.min.js"></script>
-    <script src="js/jquery.mCustomScrollbar.min.js"></script>
-    <script src="js/jcarousel.min.js"></script>
-    <script type="text/javascript" src="js/jquery.usquare.js"></script>
-    <script>
-        (function ($) {
-            $(document).ready(function () {
 
-                $(".usquare_module_wrapper").uSquare();
-                $('.jcarousel-skin-tango').jcarousel();
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Abhayam Foundation</title>
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-            });
-        })(jQuery);
-    </script>
-    <link rel="stylesheet" href="css/colorbox.css" />
-    <script type="text/javascript" src=""></script>
-    <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
-    <script>
-        $(document).ready(function () {
-            //Examples of how to assign the Colorbox event to elements
-            $(".vimeo").colorbox({ iframe: true, innerWidth: 500, innerHeight: 409 });
+<!-- Favicons -->
+<link rel="shortcut icon" sizes="16x16" href="img/favicon.ico"/>
 
-        });
-    </script>
-    <!--<SCRIPT type=text/javascript>  
-    $(document).ready(function() {  
-        $.colorbox({href:'http://player.vimeo.com/video/64758967?byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1', iframe:true, innerWidth:700, innerHeight:509});  
-    });  
-</SCRIPT>-->
-    <link rel="stylesheet" type="text/css" href="css/popup.css" />
-    <!--<script type="text/javascript" src="js/jquery.min.js"></script>
--->
-    <script type="text/javascript" src="js/popup.js"></script>
-    <meta name="GENERATOR" content="MSHTML 8.00.7600.17267" />
-    <style>
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
 
-.tickercontainer { 
-// border: 1px solid #000;
-//max-width: 92%; 
-height: 27px; 
-margin: 0; 
-padding: 0;
-overflow: hidden; 
-}
-.tickercontainer .mask { /* that serves as a mask. so you get a sort of padding both left and right */
-position: relative;
-left: 70px;
-top: 0px;
-width: 92%;
-overflow: hidden;
-}
-ul.newsticker { /* that's your list */
-position: relative;
-left: 92%;
-list-style-type: none;
-margin: 0;
-padding: 0;
+<!-- Fonts -->
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/Simple-Line-Icons-Webfont/simple-line-icons.css" media="screen" />
+<link rel="stylesheet" href="css/et-line-font/et-line-font.css">
 
-}
-ul.newsticker li {
-float: left; /* important: display inline gives incorrect results when you check for elem's width */
-margin: 0;
-padding: 0;
-}
-ul.newsticker a {
-white-space: nowrap;
-padding: 0;
-color: #000;
-margin: 0 5px 0 0;
-font-size:14px;
-} 
-ul.newsticker span {
-margin: 0 10px 0 0;
-} 
+<!-- MENU CSS -->
+<link rel="stylesheet" href="css/menuzord.css">
 
-</style>
-    <script>
-        jQuery(function () {
-            jQuery('ul#ticker01').liScroll();
-        });
-        jQuery.fn.liScroll = function (settings) {
-            settings = jQuery.extend({ travelocity: 0.07 }, settings);
-            return this.each(function () {
-                var $strip = jQuery(this);
-                $strip.addClass('newsticker');
-                var stripWidth = 1;
-                $strip.find('li').each(function (i) {
-                    stripWidth += jQuery(this, i).outerWidth(true);
-                });
-                var $mask = $strip.wrap('<div class=\'mask\'></div>');
-                var $tickercontainer = $strip.parent().wrap('<div class=\'tickercontainer\'></div>');
-                var containerWidth = $strip.parent().parent().width();
-                $strip.width(stripWidth);
-                var totalTravel = stripWidth + containerWidth;
-                var defTiming = totalTravel / settings.travelocity;
-                function scrollnews(spazio, tempo) {
-                    $strip.animate({ left: '-=' + spazio }, tempo, 'linear', function () {
-                        $strip.css('left', containerWidth);
-                        scrollnews(totalTravel, defTiming);
-                    });
-                }
-                scrollnews(totalTravel, defTiming);
-                $strip.hover(function () {
-                    jQuery(this).stop();
-                }, function () {
-                    var offset = jQuery(this).offset();
-                    var residualSpace = offset.left + stripWidth;
-                    var residualTime = residualSpace / settings.travelocity;
-                    scrollnews(residualSpace, residualTime);
-                });
-            });
-        };
-        //@ sourceURL=pen.js
-    </script>
+<!-- FONT AWESOME -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- Prettyphoto-->
+<link rel="stylesheet" href="css/prettyphoto.css">
+
+<!--Master slider-->
+<link href="master-slider/style/masterslider.css" rel="stylesheet">
+<link href="master-slider/skins/default/style.css" rel="stylesheet">
+
+<!-- OWL STYLE CSS -->
+<link rel="stylesheet" type="text/css"  href="css/owl.css">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+
+<!-- Responsive -->
+<link rel="stylesheet" type="text/css"  href="css/responsive.css">
+
+<!-- Animate.min -->
+<link rel="stylesheet" type="text/css"  href="css/animate.min.css">
+
+<!-- Revolution Style -->
+<link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
+<link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
 </head>
-<body onload="openOffersDialog();">
-       <div  style="right:0px;top:200px; position:fixed;">
-             <a href="How_to_donate.aspx" class="d_logo"><img src="images/donate2.png"></a>
-      </div>
-    <form method="post" action="./" id="form1">
-<div class="aspNetHidden">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMDc5MzM5OTIPZBYCAgMPZBYCAgEPFgIeBFRleHQF9AU8dWwgaWQ9J3RpY2tlcjAxJz48bGk+PGEgaHJlZj0naHR0cDovL2FiaGF5YWZvdW5kYXRpb24ub3JnL05ld3MuYXNweCc+VGhhbmsgeW91IFpldGEgZm9yIGdyYW50aW5nIGZ1bmRzIHRvd2FyZHMgYWJoYXlhIEh1bnQgdGhlIHN1bW1lcjwvYT48c3Bhbj58fDwvc3Bhbj48L2xpPjxsaT48YSBocmVmPSdodHRwOi8vYWJoYXlhZm91bmRhdGlvbi5vcmcvTmV3cy5hc3B4Jz5XZSBwcm9mdXNlbHkgdGhhbmsgVW5pbWVkIEhlYWx0aGNhcmUgUHZ0IEx0ZCwgSHlkZXJhYmFkIGZvciB0aGVpciBnZW5lcm91cyBDU1IgRnVuZCB0b3dhcmRzIEVkdWNhcmUgcHJvamVjdHM8L2E+PHNwYW4+fHw8L3NwYW4+PC9saT48bGk+PGEgaHJlZj0naHR0cDovL2FiaGF5YWZvdW5kYXRpb24ub3JnL05ld3MuYXNweCc+V2UgUHJvZnVzZWx5IHRoYW5rIEBTaW1wbGlmeSBXb3JrZm9yY2UgUHZ0IEx0ZCBmb3IgdGhlaXIgZ2VuZXJvdXMgQ1NSIEdyYW50PC9hPjxzcGFuPnx8PC9zcGFuPjwvbGk+PGxpPjxhIGhyZWY9J2h0dHA6Ly9hYmhheWFmb3VuZGF0aW9uLm9yZy9OZXdzLmFzcHgnPlRoYW5rIHlvdSBNIFJhbW1vaGFuYSBSYW8gZm9yIHRoZSBraW5kIGFuZCBjb250aW51b3VzIERvbmF0aW9uPC9hPjxzcGFuPnx8PC9zcGFuPjwvbGk+PGxpPjxhIGhyZWY9J2h0dHA6Ly9hYmhheWFmb3VuZGF0aW9uLm9yZy9OZXdzLmFzcHgnPkV1cm9mbGV4IGdyYW50ZWQgUlMuIDU3LDUwLDAwMCBmb3IgQ1NSIEZ1bmRzPC9hPjxzcGFuPnx8PC9zcGFuPjwvbGk+PC91bD5kZLgkb43mmLs+sH63SoX0kuNYAcBGopzsd/oMiykDXRXu" />
+
+<body>
+
+<!-- Preloader start-->
+
+<div id="preloader">
+  <div id="loader"></div>
 </div>
 
-<div class="aspNetHidden">
+<!-- Preloader end--> 
 
-	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90059987" />
+<!-- Marquee --> 
+<div class="marquee">
+<marquee behavior="scroll" style="color:#7C3630;" direction="left"><Strong>Abhayam Members<span style="color: white; font-size: 16px;" > : 526</span>&nbsp; &nbsp; &nbsp; &nbsp; 
+											Projects Finished<span style="color: white; font-size: 16px;"> : 979</span>&nbsp; &nbsp; &nbsp; &nbsp; 
+											Meals Served <span style="color: white; font-size: 16px;"> : 90000</span>&nbsp; &nbsp; &nbsp; &nbsp; 
+											<!--Groceries <span style="color: white; font-size: 16px;"> : 560</span>&nbsp; &nbsp; &nbsp; &nbsp; -->
+											Student Scholarships<span style="color: white; font-size: 16px;"> : 235</span>&nbsp; &nbsp; &nbsp; &nbsp;
+											Emergency Medical Support<span style="color: white; font-size: 16px;"> : 153</span>&nbsp; &nbsp; &nbsp; &nbsp; 
+											<!--Shoes and Socks<span style="color: white; font-size: 16px;"> : 120</span>&nbsp; &nbsp; &nbsp; &nbsp; -->
+											<!--Masks<span style="color: white; font-size: 16px;"> : 6000</span>&nbsp; &nbsp; &nbsp; &nbsp; -->
+											<!--Blankets<span style="color: white; font-size: 16px;"> : 650</span>&nbsp; &nbsp; &nbsp; &nbsp; -->
+											Pensions Every Month<span style="color: white; font-size: 16px;"> : 43</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+											Sewing Centres<span style="color: white; font-size: 16px;"> : 3</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+											Sewing Machines<span style="color: white; font-size: 16px;"> : 48</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+											<!--Nitya Aahar (Daily Meals)<span style="color: white; font-size: 16px;"> : 100</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-->
+											<!--Orphanges Partnered<span style="color: white; font-size: 16px;"> : 5</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-->
+											<!--Oldage Homes Partnered<span style="color: white; font-size: 16px;"> : 4</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-->
+											<!--Groceries to Oldage Homes<span style="color: white; font-size: 16px;"> : 23</span>&nbsp; &nbsp; &nbsp; &nbsp; 
+											Groceries to Orphanage Homes<span style="color: white; font-size: 16px;"> : 18</span>&nbsp; &nbsp; &nbsp; &nbsp; -->
+											Water Dispensers<span style="color: white; font-size: 16px;"> : 10</span>&nbsp; &nbsp; &nbsp; &nbsp; 
+											Lunch Plates <span style="color: white; font-size: 16px;"> : 200</span>&nbsp; &nbsp; &nbsp; &nbsp;
+											<!--Pensions Every Month<span style="color: white; font-size: 16px;"> : 30</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -->
+											If you want to become a Abhayam member? Call<span style="color: white; font-size: 16px;"> : +91 63032 51670</span></Strong>
+</marquee> </div>
 </div>
-    <div>
-        <div id="wrapper">
-            <!--<div id="overlay" class="overlay"></div>
-<div id="boxpopup" class="box">
+<!--END Marquee -->
 
-	<a onclick="closeOffersDialog('boxpopup');" class="boxclose"></a>
-	<div id="content1">
-    <img src="images/popupbg.jpg"> 
+<!-- Nav Bar-->
+
+<nav class="navbar-fixed-top transparrent-bg">
+  <div class="container">
+    <div id="menuzord" class="menuzord red"> <a href="index.html" class="menuzord-brand"><img class="changeable" src="img/logo-2.png" alt=""></a>
+      <ul class="menuzord-menu mp_menu">
+        <li class="active"><a href="index.html">Home</a></li>
+        </li>
+		
+		<li><a href="abhayam.html">Abhayam</a></li>
+        </li>
+		
+		<li><a href="team.html">Team</a></li>
+        </li>
+
+		<li><a href="projects.html">Projects</a></li>
+        </li>
+		
+		<li><a href="gallery.html">Gallery</a></li>
+        </li>
+		
+		<li><a href="contact.html">Contact Us</a></li>
+        </li>
+
+     <div class="right_mp_menu"> <a href="#" class="theme-btn btn-style-pinks-nav" data-toggle="modal" data-target="#donate-popup"><i class="fa"></i> Support Now</a> </div>
+	</div>
+  </div>
+</nav>
+
+<!-- END Nav Bar --> 
+
+<!-- Revolution Slider -->
+
+<div id="rev-slider">
+  <div id="rev_slider_4_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="classicslider1" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;"> 
+    <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
+    <div id="rev_slider_4_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
+      <ul>
+	  
+			<li data-index="rs-22" data-transition="zoomout" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"> 
+          <!-- MAIN IMAGE --> 
+          <img src="img/hero/slide_7.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
+          <!-- LAYERS --> 
+          <!-- LAYER NR. 12-->
+          <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-0" 
+									id="slide-23-layer-1" 
+									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+									data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-40','-40']" 
+									data-fontsize="['50','50','50','35']"	
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+									data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
+									data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+									data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
+									data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+									data-start="1000" 
+									data-splitin="chars" 
+									data-splitout="none" 
+									data-responsive_offset="on" 
+									data-elementdelay="0.05" 		
+									style="z-index: 5; white-space: nowrap;">ASHRAYA NIVAS</div>
+          <!-- LAYER NR. 2 -->
+          <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0" 
+									id="slide-24-layer-2" 
+									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+									data-y="['middle','middle','middle','middle']" data-voffset="['15','15','15','15']" 
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+									data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+									data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+									data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
+									data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+									data-start="1500" 
+									data-splitin="none" 
+									data-splitout="none" 
+									data-responsive_offset="on" 
+									style="z-index: 6; white-space: nowrap;">&nbsp;&nbsp;HOME 'which Accomodates Unattended Elders and Kids'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;at Khammam, Andhra Pradesh.
+									</div>
+        </li>
+		
+		<li data-index="rs-21" data-transition="zoomout" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"> 
+          <!-- MAIN IMAGE --> 
+          <img src="img/hero/slide_6.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
+          <!-- LAYERS --> 
+          <!-- LAYER NR. 12-->
+          <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-0" 
+									id="slide-22-layer-1" 
+									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+									data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-40','-40']" 
+									data-fontsize="['50','50','50','35']"	
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+									data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
+									data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+									data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
+									data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+									data-start="1000" 
+									data-splitin="chars" 
+									data-splitout="none" 
+									data-responsive_offset="on" 
+									data-elementdelay="0.05" 		
+									style="z-index: 5; white-space: nowrap;">NiTya AaHaR</div>
+          <!-- LAYER NR. 2 -->
+          <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0" 
+									id="slide-23-layer-2" 
+									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+									data-y="['middle','middle','middle','middle']" data-voffset="['15','15','15','15']" 
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+									data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+									data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+									data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
+									data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+									data-start="1500" 
+									data-splitin="none" 
+									data-splitout="none" 
+									data-responsive_offset="on" 
+									style="z-index: 6; white-space: nowrap;">&nbsp;&nbsp;Everyday 'Providing 100 FREE MEALS'<br>&nbsp;&nbsp;&nbsp;Near Khammam Government Hospital
+									</div>
+        </li>
+	  
+        <li data-index="rs-16" data-transition="zoomout" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"> 
+          <!-- MAIN IMAGE --> 
+          <img src="img/hero/slide_1.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
+          <!-- LAYERS --> 
+          <!-- LAYER NR. 1 -->
+          <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-0" 
+									id="slide-16-layer-1" 
+									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+									data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-40','-40']" 
+									data-fontsize="['50','50','50','35']"	
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+									data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
+									data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+									data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
+									data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+									data-start="1000" 
+									data-splitin="chars" 
+									data-splitout="none" 
+									data-responsive_offset="on" 
+									data-elementdelay="0.05" 		
+									style="z-index: 5; white-space: nowrap;">VIDVATH</div>
+          <!-- LAYER NR. 2 -->
+          <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0" 
+									id="slide-17-layer-2" 
+									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+									data-y="['middle','middle','middle','middle']" data-voffset="['15','15','15','15']" 
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+									data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+									data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+									data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
+									data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+									data-start="1500" 
+									data-splitin="none" 
+									data-splitout="none" 
+									data-responsive_offset="on" 
+									style="z-index: 6; white-space: nowrap;">A Scholarship Program for Poor Students</div>
+        </li>
+	    <!-- SLIDE-->
+        <li data-index="rs-17" data-transition="zoomout" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"> 
+          <!-- MAIN IMAGE --> 
+          <img src="img/hero/slide_2.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
+          <!-- LAYERS --> 
+          <!-- LAYER NR. 1 -->
+          <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-0" 
+									id="slide-17-layer-1" 
+									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+									data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-40','-40']" 
+									data-fontsize="['50','50','50','35']"	
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+									data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
+									data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+									data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
+									data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+									data-start="1000" 
+									data-splitin="chars" 
+									data-splitout="none" 
+									data-responsive_offset="on" 
+									data-elementdelay="0.05" 		
+									style="z-index: 5; white-space: nowrap;">ASHRAYA</div>
+          <!-- LAYER NR. 2 -->
+          <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0" 
+									id="slide-18-layer-2" 
+									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+									data-y="['middle','middle','middle','middle']" data-voffset="['15','15','15','15']" 
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+									data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+									data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+									data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
+									data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+									data-start="1500" 
+									data-splitin="none" 
+									data-splitout="none" 
+									data-responsive_offset="on" 
+									style="z-index: 6; white-space: nowrap;">A Pension Program for Old People<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;above 65 years</div>
+        </li>
+       <!-- SLIDE  -->
+        <li data-index="rs-18" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="img/bike-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Ken Burns" data-description=""> 
+          <!-- MAIN IMAGE --> 
+          <img src="img/hero/slide_3.jpg"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
+          <!-- LAYER NR. 1 -->
+          <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-0" 
+									id="slide-18-layer-1" 
+									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+									data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-40','-40']" 
+									data-fontsize="['50','50','50','35']"
+									data-lineheight="['70','70','70','50']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"						 
+									data-transform_in="y:[-100%];z:0;rZ:35deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
+									data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+									data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
+									data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+									data-start="1000" 
+									data-splitin="chars" 
+									data-splitout="none" 
+									data-responsive_offset="on" 
+									data-elementdelay="0.05" 								
+									style="z-index: 5; white-space: nowrap;">SAHAY</div>
+          <!-- LAYER NR. 2 -->
+          <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0" 
+									id="slide-19-layer-4" 
+									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+									data-y="['middle','middle','middle','middle']" data-voffset="['15','15','15','15']" 
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"					 
+									data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+									data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+									data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
+									data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+									data-start="1500" 
+									data-splitin="none" 
+									data-splitout="none" 
+									data-responsive_offset="on" 
+									style="z-index: 6; white-space: nowrap;">&nbsp;&nbsp;A Support Program given to<br> the Orphanage, Oldage Homes <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and People in Need </div>
+        </li>
+        <!-- SLIDE  -->
+		<li data-index="rs-19" data-transition="zoomin" data-slotamount="7"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"  data-thumb="img/bike-100x50.jpg"  data-rotate="0"  data-saveperformance="off"  data-title="Ken Burns" data-description=""> 
+          <!-- MAIN IMAGE --> 
+          <img src="img/hero/slide_4.jpg"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
+          <!-- LAYER NR. 1 -->
+          <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-0" 
+									id="slide-20-layer-1" 
+									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+									data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-40','-40']" 
+									data-fontsize="['50','50','50','35']"
+									data-lineheight="['70','70','70','50']"
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"						 
+									data-transform_in="y:[-100%];z:0;rZ:35deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
+									data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+									data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
+									data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+									data-start="1000" 
+									data-splitin="chars" 
+									data-splitout="none" 
+									data-responsive_offset="on" 
+									data-elementdelay="0.05" 								
+									style="z-index: 5; white-space: nowrap;">APATBANDH</div>
+          <!-- LAYER NR. 2 -->
+          <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0" 
+									id="slide-21-layer-2" 
+									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+									data-y="['middle','middle','middle','middle']" data-voffset="['15','15','15','15']" 
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+									data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+									data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+									data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
+									data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+									data-start="1500" 
+									data-splitin="none" 
+									data-splitout="none" 
+									data-responsive_offset="on" 
+									style="z-index: 6; white-space: nowrap;">&nbsp;Funds will be given to the Patients<br> in need of Emergency and Immediate <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Health Care Attention.</div>
+        </li>
+		
+		<li data-index="rs-20" data-transition="zoomout" data-slotamount="default"  data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="2000"> 
+          <!-- MAIN IMAGE --> 
+          <img src="img/hero/slide_5.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina> 
+          <!-- LAYERS --> 
+          <!-- LAYER NR. 12-->
+          <div class="tp-caption NotGeneric-Title   tp-resizeme rs-parallaxlevel-0" 
+									id="slide-21-layer-1" 
+									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+									data-y="['middle','middle','middle','middle']" data-voffset="['-40','-40','-40','-40']" 
+									data-fontsize="['50','50','50','35']"	
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+									data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
+									data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+									data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
+									data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+									data-start="1000" 
+									data-splitin="chars" 
+									data-splitout="none" 
+									data-responsive_offset="on" 
+									data-elementdelay="0.05" 		
+									style="z-index: 5; white-space: nowrap;">PADHAYI</div>
+          <!-- LAYER NR. 2 -->
+          <div class="tp-caption NotGeneric-SubTitle   tp-resizeme rs-parallaxlevel-0" 
+									id="slide-22-layer-2" 
+									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
+									data-y="['middle','middle','middle','middle']" data-voffset="['15','15','15','15']" 
+									data-width="none"
+									data-height="none"
+									data-whitespace="nowrap"
+									data-transform_idle="o:1;"
+									data-transform_in="y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;s:2000;e:Power4.easeInOut;" 
+									data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
+									data-mask_in="x:0px;y:[100%];s:inherit;e:inherit;" 
+									data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" 
+									data-start="1500" 
+									data-splitin="none" 
+									data-splitout="none" 
+									data-responsive_offset="on" 
+									style="z-index: 6; white-space: nowrap;">&nbsp;&nbsp;A Support Program given to the <br> Government Schools by providing <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;them various facilities 
+									</div>
+        </li>
+		
+      </ul>
+      <div class="tp-static-layers"></div>
+      <div class="tp-bannertimer" style="height: 7px; background-color: rgba(255, 255, 255, 0.25);"></div>
     </div>
-  <div style="clear:both"> </div>  
+  </div>
 </div>
--->
-        </div>
-        <div id="content">
-            <header>
-            <DIV class="header_wrapper">
-                 
-               <a href="Index.aspx"><IMG class=logo alt=logo src="images/logo.png"></a>
-              
-              <DIV id="menu_wrapper"><SPAN class=menu_title>MENU</SPAN>
-                <DIV class="menu_arrow"></DIV>
-                   
-                <UL class="main_menu">
-                  <LI><A href="https://Subhayafoundation.production.nslhub.com/login" target="_blank"><SPAN>Login</SPAN>
-                  <SPAN class="menu_background"></SPAN></A> </LI>
-                  <LI><A href="about_Subhaya.aspx"><SPAN>Programs</SPAN>
-                   <SPAN class="menu_background"></SPAN></A>
-                    <UL>
-                      <LI><A href="about_Subhaya.aspx"><SPAN>About Subhaya</SPAN>
-                      <SPAN class="menu_background"></SPAN></A></LI>
-                      <LI><A href="Health_care.aspx"><SPAN>Healthcare</SPAN>
-                      <SPAN class="menu_background"></SPAN></A></LI>
-                      <LI><A href="Education.aspx"><SPAN>Educare</SPAN>
-                      <SPAN class="menu_background"></SPAN></A></LI>
-                      <LI><A href="Awareness.aspx"><SPAN>Awareness</SPAN>
-                      <SPAN class="menu_background"></SPAN></A></LI>
-                      <LI><A href="Rural_development.aspx"><SPAN>Rural Development</SPAN>
-                      <SPAN class="menu_background"></SPAN></A></LI>
-                      <LI><A href="Transformation.aspx"><SPAN>Transformation</SPAN>
-                      <SPAN class="menu_background"></SPAN></A></LI>
-                      <LI><A href="Hunt_the_winter.aspx"><SPAN>Hunt the Winter</SPAN>
-                      <SPAN class="menu_background"></SPAN></A></LI>
-                      <LI><A href="http://www.Subhayahome.org/" target="_blank"><SPAN>Subhaya Home of Happiness</SPAN>
-                      <SPAN class="menu_background"></SPAN></A></LI>
-                    </UL>
-                  </LI>
-                  
-                  <LI><A href="News.aspx"><SPAN>News</SPAN>
-                   <SPAN class="menu_background"></SPAN></A>
-                    <UL>
-                      <LI><A href="News_letter.aspx" ><SPAN>News Letters</SPAN>
-                      <SPAN class="menu_background"></SPAN></A></LI>
-                      <LI><A href="Videos.aspx"><SPAN>Videos</SPAN>
-                      <SPAN class="menu_background"></SPAN></A></LI>
-                      
-                    </UL>
-                  </LI>
-                  
-                  <LI><A href="donations.aspx"><SPAN>Donation</SPAN>
-                   <SPAN class="menu_background"></SPAN></A>
-                    <UL>
-                      <LI><A href="How_to_donate.aspx"><SPAN>How to Donate</SPAN>
-                      <SPAN class="menu_background"></SPAN></A></LI>
-                      <LI><A href="How_to_Volunteer.aspx"><SPAN>How to Volunteer</SPAN>
-                      <SPAN class="menu_background"></SPAN></A></LI>
-                    </UL>
-                  </LI>
-                  
-                  <LI><A href="ContactUs.aspx"><SPAN>Contact Us</SPAN>
-                  <SPAN class="menu_background"></SPAN></A> </LI>
-                </UL>
-                
-                
-           
-                <DIV class=clear></DIV>
-              </DIV>
-              <div class="time-date">
-                      <iframe width="285" height="18" frameborder="0" src="http://free.timeanddate.com/clock/i10pxtk3/n438/tt0/td1"></iframe>
+
+<!-- END Revolution --> 
+
+<!-- Features - Services  -->
+<div id="superb-services">
+     <div class="startup text-center">
+          <div class=" container">
+               <div class="section-title center text-center">
+                        <h2 >About<strong> Abhayam</strong></h2>
+                    <hr>
+					        <p class="para-w" >Abhayam Foundation is a Registered Non-Profit Charitable Trust that Identifies the Under privileged,
+			Needy People of the Society and Helps them meet their Essential Needs including Health, Education, Hygeine and Financial support.</p>
+                    <div class="mid"></div>
+               </div>
+               <div class="row">
+                    <div class="col-md-4 col-xs-12 boxs first">
+                         <div class="single_services ">
+                              <div class="journey"></div>
+                         </div>
+                         <h4>Our Journey</h4>
+                         <p class="text-justify" >Why did Abhayam start and ? Here’s the story behind this idea: In the initial days, one of the founders Mr. Ravi Kalidindi, requested for donors on a Face book group to support and fund a few patients in</p>
+                         <a href="abhayam.html" class="theme-btn btn-style-pink">Read more <i class="fa fa-long-arrow-right" aria-hidden="true"></i> </a> </div>
+                    <div class="col-md-4 col-xs-12 boxs second">
+                         <div class="single_services ">
+                              <div class="works"></div>
+                         </div>
+                         <h4>How it Works </h4>
+                         <p class="text-justify" >The word “ABHAYAM” roughly translates to “freedom from the fear of materialistic existence. This is the core philosophy of the Abhayam Foundation, which aims to identify the essential needs of the poor</p>
+                         <a href="abhayam.html" class="theme-btn btn-style-pink">Read more <i class="fa fa-long-arrow-right" aria-hidden="true"></i> </a> </div>
+                    <div class="col-md-4 col-xs-12 boxs third">
+                         <div class="single_services ">
+                              <div class="concept"></div>
+                         </div>
+                         <h4>Our Concept</h4>
+                         <p class="text-justify" >Abhayam Whatsapp Group: One must accept and follow guidelines to join the Whatsapp Group, which is the official communication channel of Abhayam: In just 8 months from the inception, Abhayam has received </p>
+                         <a href="abhayam.html" class="theme-btn btn-style-pink">Read more <i class="fa fa-long-arrow-right" aria-hidden="true"></i> </a> </div>
+
+               </div>
+          </div>
+     </div>
+</div>
+<!-- End-Services  --> 
+
+<!--Nav Tab-->
+<div id="tab">
+  <div class="container">
+    <div class="section-title center">
+      <h2>Abhayam <strong>Projects</strong></h2>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="tab-wrap">
+              <div class="media">
+                <div class="parrent pull-left">
+                  <ul class="nav nav-tabs nav-stacked">
+                    <li class="active"><a href="#tab1" data-toggle="tab" class="analistic-01"><img src="img/about/aan.png" alt="">  ASHRAYA NIVAS </a></li>
+                    <li class=""><a href="#tab2" data-toggle="tab" class="analistic-01"><img src="img/about/nitya-aahaar.png" alt="">  NITYA AAHAR </a></li>
+					<li class=""><a href="#tab3" data-toggle="tab" class="analistic-01"><img src="img/about/vidvat-icon.png" alt="">  VIDVATH </a></li>
+					<li class=""><a href="#tab4" data-toggle="tab" class="analistic-02"><img src="img/about/ashraya-icon.png" alt="">  ASHRAYA </a></li>
+                    <li class=""><a href="#tab5" data-toggle="tab" class="tehnical"><img src="img/about/sahay-icon.png" alt="">  SAHAY </a></li>
+                    <li class=""><a href="#tab6" data-toggle="tab" class="tehnical"><img src="img/about/apatbandh-icon.png" alt="">  APATBANDH </a></li>
+                    <li class=""><a href="#tab7" data-toggle="tab" class="tehnical"><img src="img/about/padayi-icon.png" alt="">  PADHAYI </a></li>
+                  </ul>
+                </div>
+                <div class="parrent media-body">
+                  <div class="tab-content">
+                    <div class="tab-pane fade active in" id="tab1">
+                      <div class="media">
+                        <div class="media-body">
+                          <div class="list-o">
+                            <h4>ASHRAYA NIVAS </h4>
+                            <hr/>
+                            <p class="text-justify" >As our 1000th Project we have decided to start our own Centres which accomodates Unattended elders and Kids, we named it <Strong>ASHRAYA NIVAS</Strong> at Khammam.</p>
+                            <Strong>Process:</Strong><br>
+							<ul>
+                              <li><i class="fa fa-arrow-right" class="text-justify"></i> As of now our Ashraya Nivas will accomodate 15 Unattended elders and we will take care them as our own family members.</li>
+                              <li><i class="fa fa-arrow-right" class="text-justify"></i> We will be providing them Accomodation, Food and Home with all the facilities like Television, Security, CC Cameras, Well maintained &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;beds, Washing Machines, Water Dispensers, Water Purifiers etc</li>
+                              <li><i class="fa fa-arrow-right" class="text-justify"></i> Per Day Meals costing us Rs 3500 per day which includes salaries to CHefs, Maids, Care Taker, To Sponsor Meals or Groceries<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Please send whatsapp message to <Strong>6303251670</Strong>.</li>
+                            </ul>
+							</div>
+                        </div>
+                      </div>
+                    </div>
+					<div class="tab-pane fade " id="tab2">
+                      <div class="media">
+                        <div class="media-body">
+                          <div class="list-o">
+                            <h4>NITYA AAHAR</h4>
+                            <hr/>
+                            <p class="text-justify" >Under Nitya Aahar Program, From Feb 19 - 2021 we are Daily Providing 100 Free MEALS to Patients attendants at Women and Child Wing, GOVERNMENT HOSPITAL KHAMMAM.</p>
+                            <Strong>Process:</Strong><br>
+							<ul>
+                              <li> <i class="fa fa-arrow-right" class="text-justify"></i> Daily We Cook food at our Kitchen and we recently bought our own Maruthi EECO Van for Carrying Prepared food to the hospital.</li>
+                              <li> <i class="fa fa-arrow-right" class="text-justify"></i> Our Volunteer Team Serving Rice, Curry, Fry, Chutney and Curd and Occassionally Fruits and Sweets.</li>
+                              <li> <i class="fa fa-arrow-right" class="text-justify"></i> Per Day Meals costing us Rs 5200 per day which includes salaries to CHefs, Maids, Drivers, Volunteers, To Sponsor Meals or Groceries <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please send whatsapp message to <Strong>6303251670</Strong>.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+					 <div class="tab-pane fade " id="tab3">
+                      <div class="media">
+                        <div class="media-body">
+                          <div class="list-o">
+                            <h4>VIDVATH</h4>
+                            <hr/>
+                            <p class="text-justify" >Under VIDVATH Program,a SCHOLARSHIP worth INR 5000 will be given to the students from poor financial background especially those from orphanages or with Single Parent.</p>
+                            <Strong>Process:</Strong><br>
+							<ul>
+                              <li><i class="fa fa-arrow-right" class="text-justify"></i> VIDVATH Application need to be filled and Required documents need to be sent</li>
+                              <li><i class="fa fa-arrow-right" class="text-justify"></i> After Application Received our Volunteers will do Enquiries</li>
+                              <li><i class="fa fa-arrow-right" class="text-justify"></i> Based on Feedback Scholarship Amount will be transferred directly to the Educational Institutes</li>
+                            </ul>
+							</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade " id="tab4">
+                      <div class="media">
+                        <div class="media-body">
+                          <div class="list-o">
+                            <h4>ASHRAYA</h4>
+                            <hr/>
+                            <p class="text-justify" >Under ASHRAYA Program, PENSION will be given to the Old people above 65 Yrs or people with Permanent Disabilities.</p>
+                            <Strong>Process:</Strong><br>
+							<ul>
+                              <li> <i class="fa fa-arrow-right" class="text-justify"></i> ASHRAYA Application needs to be filled and Required documents need to be sent.</li>
+                              <li> <i class="fa fa-arrow-right" class="text-justify"></i> After Receiving the Application our Volunteers team will do Enquiries.</li>
+                              <li> <i class="fa fa-arrow-right" class="text-justify"></i> Based on Feedback Pension Amount will be transferred directly to the Pensioner every month.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab5">
+                      <div class="media-body">
+                        <div class="list-o">
+                          <h4>SAHAY</h4>
+                          <hr/>
+                          <p class="text-justify" >Under SAHAY Program SUPPORT will be given to the Orphanage/Oldage Homes/People in Need by providing them with Groceries, essentials like water dispensaries, beds, furniture, etc.conducting Medical Camps, offering timely medical Support and doctor consultations.</p>
+                          <Strong>Process:</Strong><br>
+						  <ul>
+                            <li> <i class="fa fa-arrow-right" class="text-justify"></i> Our Volunteers will visit Orphanage/Oldage Homes. </li>
+                            <li> <i class="fa fa-arrow-right" class="text-justify"></i> Volunteers will have personal interaction with the Caretakers and inmates. </li>
+                            <li> <i class="fa fa-arrow-right" class="text-justify"></i> Based on Feedback support will be provided.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab6">
+                      <div class="media-body">
+                        <div class="list-o">
+                          <h4>APATBANDH</h4>
+                          <hr/>
+                          <p class="text-justify" >Under APATBANDH Program FUNDS will be given to the Patients in need of emergency and immediate health care attention.</p>
+                          <Strong>Process:</Strong><br>
+						  <ul>
+                            <li> <i class="fa fa-arrow-right" class="text-justify"></i> APATBANDH Application need to be filled and Required documents need to be sent.</li>
+                            <li> <i class="fa fa-arrow-right" class="text-justify"></i> After Application Received our Volunteers team will do Enquiries and will be sent to our panel of doctors.</li>
+                            <li> <i class="fa fa-arrow-right" class="text-justify"></i> Based on Feedback Support will be provided, Social media campaign also will be done on case to case basis</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="tab7">
+                      <div class="media-body">
+                        <div class="list-o">
+                          <h4>PADHAYI</h4>
+                          <hr/>
+                          <p class="text-justify" >Under our PADHAYI Program SUPPORT will be given to the Government Schools by providing them facilities Like Water Dispensers, Computers, Lab equipment, Shoes and Socks, Library Facilities, Lunch Plates, stationary, Sanitary Napkins.</p>
+                         <Strong>Process:</Strong><br>
+						 <ul>
+                            <li> <i class="fa fa-arrow-right" class="text-justify"></i> Our Volunteers will visit the Government Schools. </li>
+                            <li> <i class="fa fa-arrow-right" class="text-justify"></i> Volunteers will have personal interaction with the Teachers and Students. </li>
+                            <li> <i class="fa fa-arrow-right" class="text-justify"></i> Based on Feedback support will be provided.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--/.tab-content--> 
+                </div>
+                <!--/.media-body--> 
               </div>
-              <!-- menu_wrapper --></DIV>
-            <!-- header_wrapper --></header>
-            <!--<H2 class="separator_h2"></H2>-->
-            <div class="content">
-                <div class="container">
-                    <div class="marquee-[sibling marq">
-                        <h4>
-                            News</h4>
-                    </div>
-                    <div class="news_feed">
-                    <ul id='ticker01'><li><a href='http://Subhayafoundation.org/News.aspx'>Thank you Zeta for granting funds towards Subhaya Hunt the summer</a><span>||</span></li><li><a href='http://Subhayafoundation.org/News.aspx'>We profusely thank Unimed Healthcare Pvt Ltd, Hyderabad for their generous CSR Fund towards Educare projects</a><span>||</span></li><li><a href='http://Subhayafoundation.org/News.aspx'>We Profusely thank @Simplify Workforce Pvt Ltd for their generous CSR Grant</a><span>||</span></li><li><a href='http://Subhayafoundation.org/News.aspx'>Thank you M Rammohana Rao for the kind and continuous Donation</a><span>||</span></li><li><a href='http://Subhayafoundation.org/News.aspx'>Euroflex granted RS. 57,50,000 for CSR Funds</a><span>||</span></li></ul>
-                        
-                    </div>
-                    <!--<marquee onMouseOver='this.stop();' OnMouseOut='this.start();' > 
-                   Subhaya Foundation Subhaya Foundation				
-                   Subhaya Foundation Subhaya Foundation				
-                   Subhaya Foundation Subhaya Foundation				
-                   Subhaya Foundation Subhaya Foundation	
-</marquee>			
--->
-                </div>
+              <!--/.media--> 
             </div>
-            <div class="usquare_module_wrapper usquare_products_style">
-                <div class="usquare_module_shade">
-                </div>
-                <!-- section 1 -->
-                <div class="usquare_block">
-                    <img class="usquare_square" alt="" src="images/abt-Subhaya.jpg">
-                    <!--<IMG class=usquare_arrow alt=arrow src="images/z-logo.png"> 
--->
-                    <div class="usquare_square usquare_square_bg1">
-                        <div class="usquare_square_text_wrapper">
-                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
-                            <div class="clear">
-                            </div>
-                            <h2 class="h_t1" style="left:4px !important">
-                                About Subhaya</h2>
-                            <span></span>
-                            <div class="clear">
-                            </div>
-                        </div>
-                        <!-- usquare_square_wrapper -->
-                    </div>
-                    <!--div    usquare_square -->
-                    <div class="display-none usquare_block_extended usquare_square_bg1">
-                        <a class="close" href="#">
-                            <img alt="close" src="images/close.png"></a>
-                        <ul class="social_background">
-                            <li><a href="#">
-                                <img alt="social" src="images/social-fb.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-tw.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-in.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-pint.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-yah.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-dig.png"></a></li>
-                        </ul>
-                        <div class="clear">
-                        </div>
-                        <span class="bold">info:</span>
-                        <div class="usquare_about1">
-                            The most beautiful image in the world is that of a genuine smile, a smile that naturally
-                            occurs in someone when we minimize their pain through our little deeds of selfless
-                            support and kindness. This is the precept behind Subhaya: ‘alleviation of suffering!’
-                            The small acts of help many times go a long way in bringing relief to someone who
-                            is acutely suffering in some way. <a class="read_more" href="about_Subhaya.aspx">READ
-                                MORE</a>
-                        </div>
-                    </div>
-                    <!-- usquare_block_extended -->
-                </div>
-                <!-- usquare_block -->
-                <!-- section 2 -->
-                <div class="usquare_block">
-                    <img class="usquare_square" alt="" src="images/Healthcare-img.jpg">
-                    <div class="usquare_square usquare_square_bg2">
-                        <div class="usquare_square_text_wrapper">
-                            <!--<IMG class=usquare_arrow alt=arrow src="arrow.png">-->
-                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
-                            <div class="clear">
-                            </div>
-                            <h2 class="h_t2">
-                                Healthcare</h2>
-                            <span></span>
-                            <div class="clear">
-                            </div>
-                        </div>
-                        <!-- usquare_square_wrapper -->
-                    </div>
-                    <!--div    usquare_square -->
-                    <div class="display-none usquare_block_extended usquare_square_bg2">
-                        <a class="close" href="#">
-                            <img alt="close" src="images/close.png"></a>
-                        <ul class="social_background">
-                            <li><a href="#">
-                                <img src="blank.png"></a></li>
-                        </ul>
-                        <div class="clear">
-                        </div>
-                        <span class="bold">info:</span>
-                        <div class="usquare_about1">
-                            Healthcare in India is one of the most critical areas on which maximum focus must
-                            be placed. Thousands of sick people die each day due to lack of access to proper
-                            healthcare. We believe that a more specific context of service bears more fruit
-                            rather than conduction of regular medical camps. Subhaya has been actively involved
-                            in personal care to hundreds of individuals with such debilitating conditions. <a
-                                class="read_more" href="Health_care.aspx">READ MORE</a>
-                        </div>
-                    </div>
-                    <!-- usquare_block_extended -->
-                </div>
-                <!-- usquare_block -->
-                <!-- section 3 -->
-                <div class="usquare_block" style="margin-right: 0px; float: right;">
-                    <img class="usquare_square" alt="" src="images/Educare-img.JPG">
-                    <div class="usquare_square usquare_square_bg3">
-                        <div class="usquare_square_text_wrapper">
-                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
-                            <div class="clear">
-                            </div>
-                            <h2 class="h_t3">
-                                Educare</h2>
-                            <span></span>
-                            <div class="clear">
-                            </div>
-                        </div>
-                        <!-- usquare_square_wrapper -->
-                    </div>
-                    <!--div    usquare_square -->
-                    <div class="display-none usquare_block_extended usquare_square_bg3">
-                        <a class="close" href="#">
-                            <img alt="close" src="images/close.png"></a>
-                        <ul class="social_background">
-                            <li><a href="#">
-                                <img alt="social" src="images/social-fb.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-tw.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-in.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-pint.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-yah.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-dig.png"></a></li>
-                        </ul>
-                        <div class="clear">
-                        </div>
-                        <span class="bold">info:</span>
-                        <div class="usquare_about1">
-                            Subhaya believe that change is possible in the world only through education. In our
-                            country where still much of the rural folk and even a degree of the urban folk are
-                            illiterate, it is imperative for both the government, the corporates and in general
-                            the society to ensure that people are encouraged and motivated towards education.
-                            In pursuit of this noble objective, Subhaya now hosts nearly 400 students in two
-                            schools at Anantapur. <a class="read_more" href="Education.aspx">READ MORE</a>
-                        </div>
-                    </div>
-                    <!-- usquare_block_extended -->
-                </div>
-                <!-- usquare_block -->
-                <!-- section 4 -->
-                <div class="usquare_block">
-                    <div class="usquare_square usquare_square_bg4">
-                        <div class="usquare_square_text_wrapper">
-                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
-                            <div class="clear">
-                            </div>
-                            <h2 class="usquare_r">
-                                Awareness</h2>
-                            <span class="usquare_r"></span>
-                            <div class="clear">
-                            </div>
-                        </div>
-                        <!-- usquare_square_wrapper -->
-                    </div>
-                    <!--div    usquare_square -->
-                    <img class="usquare_square" alt="" src="images/aware.jpg">
-                    <div class="display-none usquare_block_extended usquare_square_bg4">
-                        <a class="close close_left_side" href="#">
-                            <img alt="close" src="images/close.png"></a>
-                        <ul class="social_background">
-                            <li><a href="#">
-                                <img alt="social" src="images/social-fb.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-tw.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-in.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-pint.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-yah.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-dig.png"></a></li>
-                        </ul>
-                        <div class="clear">
-                        </div>
-                        <span class="bold">info:</span>
-                        <div class="usquare_about1">
-                            We at Subhaya foundation firmly believe that awareness is the key to social progress.
-                            We strongly advocate awareness programs right from the primary school level and
-                            to also to the urban and rural communities on various aspects of better living.
-                            We cover a wide array of subjects such as moral awareness, social awareness, health
-                            awareness, awareness on hygiene and sanitation, awareness on education. <a class="read_more"
-                                href="Awareness.aspx">READ MORE</a>
-                        </div>
-                    </div>
-                    <!-- usquare_block_extended -->
-                </div>
-                <!-- usquare_block -->
-                <!-- section 5 -->
-                <!--		<div class="usquare_block">
-						 <img src="content/usquare/products/1.jpg" class="usquare_square1" alt="" />
--->
-                <div class="usquare_block2">
-                    <div class="usquare_square1">
-                        <img class="usquare_square1" alt="" src="images/center-logo.jpg">
-                    </div>
-                    <!--div    usquare_square -->
-                    <div class="display-none usquare_block_extended">
-                        <a class="close close_left_side" href="#">
-                            <img alt="close" src="images/close.png"></a>
-                        <ul class="social_background">
-                            <li><a href="#">
-                                <img alt="social" src="images/social-fb.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-tw.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-in.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-pint.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-yah.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-dig.png"></a></li>
-                        </ul>
-                        <div class="clear">
-                        </div>
-                        <span class="bold">info:</span>
-                        <div class="usquare_about1">
-                            <a class="read_more" href="#">READ MORE</a>
-                        </div>
-                    </div>
-                    <!-- usquare_block_extended -->
-                </div>
-                <!-- usquare_block -->
-                <!-- section 6 -->
-                <div class="usquare_block" style="margin-right: 0px; float: right;">
-                    <div class="usquare_square usquare_square_bg6">
-                        <div class="usquare_square_text_wrapper">
-                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
-                            <div class="clear">
-                            </div>
-                            <h2 class="ab_t" style="left:8px !important">
-                                Rural Development</h2>
-                            <span class="usquare_r"></span>
-                            <div class="clear">
-                            </div>
-                        </div>
-                        <!-- usquare_square_wrapper -->
-                    </div>
-                    <!--div    usquare_square -->
-                    <img class="usquare_square" alt="" src="images/Rural-img.jpg">
-                    <div class="display-none usquare_block_extended usquare_square_bg6">
-                        <a class="close close_left_side" href="#">
-                            <img alt="close" src="images/close.png"></a>
-                        <ul class="social_background">
-                            <li><a href="#">
-                                <img alt="social" src="images/social-fb.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-tw.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-in.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-pint.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-yah.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-dig.png"></a></li>
-                        </ul>
-                        <div class="clear">
-                        </div>
-                        <span class="bold">info:</span>
-                        <div class="usquare_about1">
-                            It is a fact that 60% of India still remains under developed and much of the confines
-                            of this lack of development are in the rural sector. Though the rural sector contributes
-                            tremendously to the vote bank and ironically is the real elector of a government,
-                            much of the sector remains neglected, with poor sanitation, poor infrastructure,
-                            poor employment, poor education and poor healthcare. <a class="read_more" href="Rural_development.aspx">
-                                READ MORE</a>
-                        </div>
-                    </div>
-                    <!-- usquare_block_extended -->
-                </div>
-                <!-- usquare_block -->
-                <!-- section 7 -->
-                <div class="usquare_block">
-                    <img class="usquare_square" alt="" src="images/transformation.jpg">
-                    <div class="usquare_square usquare_square_bg7">
-                        <div class="usquare_square_text_wrapper">
-                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
-                            <div class="clear">
-                            </div>
-                            <h2 class="h_t6">
-                                Transformation</h2>
-                            <span></span>
-                            <div class="clear">
-                            </div>
-                        </div>
-                        <!-- usquare_square_wrapper -->
-                    </div>
-                    <!--div    usquare_square -->
-                    <div class="display-none usquare_block_extended usquare_square_bg7">
-                        <a class="close" href="#">
-                            <img alt="close" src="images/close.png"></a>
-                        <ul class="social_background">
-                            <li><a href="#">
-                                <img alt="social" src="images/social-fb.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-tw.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-in.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-pint.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-yah.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-dig.png"></a></li>
-                        </ul>
-                        <div class="clear">
-                        </div>
-                        <span class="bold">info:</span>
-                        <div class="usquare_about1">
-                            Swami Vivekananda says that true transformation of the self can happen only when
-                            you serve. Transformation is the only way one can hope to improve our society and
-                            develop the world. Subhaya advocates service through everyone, service to the sick,
-                            service to the needy, service to the destitute and service to one and all. Many
-                            of Subhaya’s volunteers are examples of transformed souls. <a class="read_more" href="Transformation.aspx">
-                                READ MORE</a>
-                        </div>
-                    </div>
-                    <!-- usquare_block_extended -->
-                </div>
-                <!-- usquare_block -->
-                <!-- section 8 -->
-                <div class="usquare_block">
-                    <img class="usquare_square" alt="" src="images/hunt-the-winter-img.JPG">
-                    <div class="usquare_square usquare_square_bg8">
-                        <div class="usquare_square_text_wrapper">
-                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
-                            <div class="clear">
-                            </div>
-                            <h2 class="h_t6">
-                                Hunt&nbsp;the&nbsp;Winter</h2>
-                            <span></span>
-                            <div class="clear">
-                            </div>
-                        </div>
-                        <!-- usquare_square_wrapper -->
-                    </div>
-                    <!--div usquare_square -->
-                    <div class="display-none usquare_block_extended usquare_square_bg8">
-                        <a class="close" href="#">
-                            <img alt="close" src="images/close.png"></a>
-                        <ul class="social_background">
-                            <li><a href="#">
-                                <img alt="social" src="images/social-fb.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-tw.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-in.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-pint.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-yah.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-dig.png"></a></li>
-                        </ul>
-                        <div class="clear">
-                        </div>
-                        <span class="bold">info:</span>
-                        <div class="usquare_about1">
-                            As part of its mission to spread love & care for the community around, Subhaya decided
-                            to take up "Hunt the Winter" project. Our aim is to distribute 1000 blankets every
-                            year with help of kind hearted sponsors. This is a unique program, where volunteers
-                            will search for real needy sleeping on the road at mid-nights and cover them in
-                            a blanket without even disturbing their sleep. <a class="read_more" href="Hunt_the_winter.aspx">
-                                READ MORE</a>
-                        </div>
-                    </div>
-                    <!-- usquare_block_extended -->
-                </div>
-                <!-- usquare_block -->
-                <!-- section 9 -->
-                <div class="usquare_block" style="margin-right: 0px; float: right;">
-                    <img class="usquare_square" alt="" src="images/home-happyness-img.jpg">
-                    <div class="usquare_square usquare_square_bg9">
-                        <div class="usquare_square_text_wrapper">
-                            <img class="usquare_arrow" alt="arrow" src="images/z-logo.png">
-                            <div class="clear">
-                            </div>
-                            <h2 class="ab_t" style="left:5px !important">
-                                Subhaya Home<br>
-                                &nbsp;of&nbsp;Happiness</h2>
-                            <span></span>
-                            <div class="clear">
-                            </div>
-                        </div>
-                        <!-- usquare_square_wrapper -->
-                    </div>
-                    <!--div usquare_square -->
-                    <div class="display-none usquare_block_extended usquare_square_bg8">
-                        <a class="close" href="#">
-                            <img alt="close" src="images/close.png"></a>
-                        <ul class="social_background">
-                            <li><a href="#">
-                                <img alt="social" src="images/social-fb.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-tw.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-in.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-pint.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-yah.png"></a></li>
-                            <li><a href="#">
-                                <img alt="social" src="images/social-dig.png"></a></li>
-                        </ul>
-                        <div class="clear">
-                        </div>
-                        <span class="bold">info:</span>
-                        <div class="usquare_about1">
-                            Subhaya FOUNATION has decided to rescue and rebuild the lives of such destitutes
-                            on the streets with its aroposed Porhect 'Subhaya Home of Happiness'{aHoH} at Hyderabad.
-                            This remains to be a center of HOPE for all such people and further it will be workig
-                            on lakhs of youngsters in the villages/cities about life skills by its capacity
-                            building initiatives to increase the empolyability. <a class="read_more" href="http://www.Subhayahome.org/"
-                                target="_blank">READ MORE</a>
-                        </div>
-                    </div>
-                    <!-- usquare_block_extended -->
-                </div>
-                <!-- usquare_block -->
-                <div class="clear">
-                </div>
-            </div>
-            <!-- usquare_module_wrapper -->
-            <!--<DIV class=video>
-<P><A class=vimeo title="Naik Foundation Video" 
-href="http://player.vimeo.com/video/64758967?byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1" 
-height="375" width="500">Click here to view our 
-Video</A></P></DIV>-->
-            <div class="footer">
-                <div style="text-align: center">
-                    <ul id="footer">
-                        <li><a href="about_Subhaya.aspx">About Subhaya</a></li>
-                        <li>| </li>
-                        <li><a href="History_of_Subhaya.aspx">History of Subhaya</a></li>
-                        <li>| </li>
-                        <li><a href="Health_care.aspx">Helthcare</a></li>
-                        <li>| </li>
-                        <li><a href="Education.aspx">Educare</a></li>
-                        <li>| </li>
-                        <li><a href="Awareness.aspx">Awareness</a></li>
-                        <li>| </li>
-                        <li><a href="Rural_development.aspx">Rural Infra</a></li>
-                        <li>| </li>
-                        <li><a href="Transformation.aspx">Transformation</a></li>
-                        <li>| </li>
-                        <li><a href="ContactUs.aspx">Contact Us</a></li>
-                    </ul>
-                    <div class="poweredby">
-                        <a target="_blank" href="http://www.graylogictech.com/">
-                            <img src="images/poweredby.png"></a>
-                    </div>
-                </div>
-                <!--<div>
-                <a href="#">
-<img src="http://counter6.bestfreecounterstat.com/private/freecounterstat.php?c=4e5c15513c70e98158ca25815ff3eece" border="0" title="hit counter" alt="hit counter">
-</a>
-             </div>-->
-            </div>
-            <div class="clear">
-            </div>
-        </div>
-        <!-- #content -->
+        <!--/.tab-wrap--> 
+      </div>
+      <!--/.col-sm-6--> 
     </div>
-    </form>
-</body>
-</html>
+    <!--/.row--> 
+  </div>
+  <!--/.container--> 
+</div>
+<!-- END Nav Tab -->  
 
+<!--Testimonials-->
+
+<div class="testimonials-section style-two">
+  <div class="container">
+    <div class="section-title center">
+      <h2><strong> Testimonials</strong></h2>
+      <hr>
+    </div>
+    
+    <!--Slider-->
+    <div class="testimonials-slider testimonials-carousel"> 
+      
+      <!--Slide-->
+      <article class="slide-item">
+        <div class="info-box">
+          <figure class="image-box"><img src="img/t-1.jpg" alt=""></figure>
+          <h3>M V NAGARAJU</h3>
+          <p class="designation">Bhimavaram, WG Dist.</p>
+        </div>
+        <div class="slide-text">
+          <div class="testimonials-s" >" Thank you Abhayam team for sponsoring me Scholarship. Your help motivates me to reach great heights. Thank you to Abhayam Foundation and Team."</div>
+        </div>
+      </article>
+      
+      <!--Slide-->
+      <article class="slide-item">
+        <div class="info-box">
+          <figure class="image-box"><img src="img/t-2.jpg" alt=""></figure>
+          <h3>Matrudevobhava Anadha Ashramam</h3>
+          <p class="designation">Hyderabad</p>
+        </div>
+        <div class="slide-text">
+          <div class="testimonials-s">" We are Happy that we Recieved Contribution from ABHAYAM towards GROCERIES Items to our Ashramam during this lock down time." &nbsp; </div>
+        </div>
+      </article>
+      
+      <!--Slide-->
+      <article class="slide-item">
+        <div class="info-box">
+          <figure class="image-box"><img src="img/t-1.jpg" alt=""></figure>
+          <h3>K Raghu</h3>
+          <p class="designation">Karnataka</p>
+        </div>
+        <div class="slide-text">
+          <div class="testimonials-s">" I am a Farmer and Abhayam Scholarships helped my son's education a Lot and happy to share that they scored well ". Thank you ABHAYAM. </div>
+        </div>
+      </article>
+      
+      <!--Slide-->
+      <article class="slide-item">
+        <div class="info-box">
+          <figure class="image-box"><img src="img/t-4.jpg" alt=""></figure>
+          <h3>Amma Nanna Anada Ashramam</h3>
+          <p class="designation">Choutuppal, Telangana</p>
+        </div>
+        <div class="slide-text">
+          <div class="testimonials-s">" We Thank Abhayam and their Team for contributing 25000 during our crisis time.<br> It helped us to feed 270 inmates in our Ashram."</div>
+        </div>
+      </article>
+      
+      <!--Slide-->
+      <article class="slide-item">
+        <div class="info-box">
+          <figure class="image-box"><img src="img/t-5.jpg" alt=""></figure>
+          <h3>Nageswara Rao</h3>
+          <p class="designation">Hyderabad</p>
+        </div>
+        <div class="slide-text">
+          <div class="testimonials-s">" Thank you Abhayam and your Team for supporting my daughter Meghana for her treatment of bodyburns. <br>Thank you very much. "</div>
+        </div>
+      </article>
+	  
+	        <!--Slide-->
+      <article class="slide-item">
+        <div class="info-box">
+          <figure class="image-box"><img src="img/t-6.jpg" alt=""></figure>
+          <h3>S Srinivasulu </h3>
+          <p class="designation">ZPH School, Anantapuram</p>
+        </div>
+        <div class="slide-text">
+          <div class="testimonials-s">" Thank you Abhayam and your team for providing us water tanker and plants to our Government School at K Narsapuram, <br>Anantapur District."</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+<!--END Testimonials--> 
+
+<!-- Team  -->
+
+<div id="team" class="team">
+  <div class="container">
+    <div class="section-title  center">
+      <h2>ABHAYAM <strong> TEAM </strong></h2>
+      <div class="col-sm-12">
+        <div class="ms-staff-carousel">
+          <div class="master-slider" id="teamslider">
+            <div class="ms-slide"> <img src="assets/master-slider/style/blank.gif" data-src="img/team/team-1.jpg" alt=""/>
+              <div class="ms-info text-center">
+                <h3>Mr. Ravi Kalidindi</h3>
+                <h4>Founder & President</h4>
+
+              </div>
+            </div>
+            <!--SLIDE TEAM-->
+            <div class="ms-slide"> <img src="assets/master-slider/style/blank.gif" data-src="img/team/team-2.jpg" alt=""/>
+              <div class="ms-info text-center">
+                <h3>Mr. Sunil Nadimpalli </h3>
+                <h4>Co-Founder & Secretary</h4>
+
+              </div>
+            </div>
+			
+			 <!--SLIDE TEAM-->
+            <div class="ms-slide"> <img src="assets/master-slider/style/blank.gif" data-src="img/team/team-7.jpg" alt=""/>
+              <div class="ms-info text-center">
+                <h3>Ms. Sridevi Madireddy</h3>
+                <h4>Vice President</h4>
+              </div>
+            </div>
+			
+			   <!--SLIDE TEAM--> 
+			  <div class="ms-slide"> <img src="assets/master-slider/style/blank.gif" data-src="img/team/team-8.jpg" alt=""/>
+              <div class="ms-info text-center">
+                <h3>Mr. Rajesh Bhupathiraju </h3>
+                <h4>Vice President</h4>
+              </div>
+            </div>
+			
+			<!--SLIDE TEAM-->
+            <div class="ms-slide"> <img src="assets/master-slider/style/blank.gif" data-src="img/team/team-6.jpg" alt=""/>
+              <div class="ms-info text-center">
+                <h3>Ms. Gayathri Susarla</h3>
+                <h4>Joint Secretary</h4>
+
+              </div>
+            </div>
+			
+            <!--SLIDE TEAM-->
+            <div class="ms-slide"> <img src="assets/master-slider/style/blank.gif" data-src="img/team/team-3.jpg" alt=""/>
+              <div class="ms-info text-center">
+                <h3>Dr. Vinay Penematsa</h3>
+                <h4>MEMBER</h4>
+
+              </div>
+            </div>
+            <!--SLIDE TEAM-->
+            <div class="ms-slide"> <img src="assets/master-slider/style/blank.gif" data-src="img/team/team-4.jpg" alt=""/>
+              <div class="ms-info text-center">
+                <h3>Dr. Jagadeesh Bandi</h3>
+                <h4>MEMBER</h4>
+
+              </div>
+            </div>
+            <!--SLIDE TEAM-->
+            <div class="ms-slide"> <img src="assets/master-slider/style/blank.gif" data-src="img/team/team-5.jpg" alt=""/>
+              <div class="ms-info text-center">
+                <h3>Dr. Vijay Penematsa</h3>
+                <h4>MEMBER</h4>
+
+              </div>
+            </div>
+			<!--SLIDE TEAM--> 
+			  <div class="ms-slide"> <img src="assets/master-slider/style/blank.gif" data-src="img/team/team-9.jpg" alt=""/>
+              <div class="ms-info text-center">
+                <h3>Mr. Butchi Raju Mudunuri</h3>
+                <h4>Treasurer</h4>
+              </div>
+            </div>
+          </div>
+          <!--- END MASTER SLIDER -->
+          <div class="ms-staff-info" id="staff-info"> </div>
+        </div>
+        <!--- END MS STAFF CAROUSEL --> 
+      </div>
+      <!--- END COL --> 
+    </div>
+    <!--- END ROW --> 
+  </div>
+  <!--- END CONTAINER --> 
+</div>
+
+<!-- END TEAM --> 
+
+<!--Sponsors Section-->
+
+<div class="sponsors">
+  <div class="container">
+      <div class="section-title  center">
+      <h2>ABHAYAM <strong> PARTNERS </strong></h2>
+    <div class="slider-outer"> 
+      <!--Sponsors Slider-->
+      <ul class="sponsors-slider">
+        <li><a href="#"><img src="img/clients/1.png" alt=""></a></li>
+        <li><a href="#"><img src="img/clients/2.png" alt=""></a></li>
+        <li><a href="#"><img src="img/clients/3.png" alt=""></a></li>
+        <li><a href="#"><img src="img/clients/4.png" alt=""></a></li>
+        <li><a href="#"><img src="img/clients/6.png" alt=""></a></li>
+		<li><a href="#"><img src="img/clients/7.png" alt=""></a></li>
+		<li><a href="#"><img src="img/clients/8.png" alt=""></a></li>
+		<li><a href="#"><img src="img/clients/9.png" alt=""></a></li>
+		<li><a href="#"><img src="img/clients/10.png" alt=""></a></li>
+		<li><a href="#"><img src="img/clients/11.png" alt=""></a></li>
+		<li><a href="#"><img src="img/clients/12.png" alt=""></a></li>
+		<li><a href="#"><img src="img/clients/13.png" alt=""></a></li>
+		<li><a href="#"><img src="img/clients/14.png" alt=""></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Demo Heading -->
+
+<div class="main-area top-download text-center ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <p class="top-btn-text">Come, Join us in this Noble Cause! Your Contribution can help someones Life better!! </p>
+      </div>
+      <div class="col-md-4 "> <a href="contact.html" class="theme-btn btn-style-white"><i class="fa fa-pencil-square-o"></i> More Info...</a> </div>
+    </div>
+  </div>
+</div>
+
+<!-- END Demo Heading --> 
+
+<!-- Footer Start  -->
+
+<div class="footer-section-area padding-top-bottom">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <div class="text-center"><a href="index.html" class="menuzord-brand"><img src="img/logo-3.png" alt="#"></a></div>
+        <div class="clearfix"></div>
+        <p class="white"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Together <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; WE <br> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Support</strong></p>
+
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <div class="title">
+          <h3>Quick Links</h3>
+        </div>
+        <div class="information">
+          <ul>
+            <li><a href="abhayam.html"> Abhayam</a></li>
+            <li><a href="team.html"> Team</a></li>
+            <li><a href="projects.html"> Projects</a></li>
+
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <div class="title">
+          <ul>
+		     <li><a href="gallery.html">Gallery</a></li>
+			 <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#donate-popup">Support Now</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+        <div class="title">
+          <h3>Contact Info:</h3>
+        </div>
+        <div class="popular-post">
+        <ul>
+          <li><a href="#"> <i class="fa fa-map-marker fa-2x"></i> KPHB Colony, Kukatpally, Hyderabad</a></li>
+          <li><a href="#"><i class="fa fa-envelope-o fa-2x"></i>abhayam.projects@gmail.com</a></li>
+          <li><a href="#"><i class="fa fa-phone fa-2x"></i>+91 6303251670, 9493401555</a></li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End Footer --> 
+
+<!-- Copyright Start  -->
+
+<div class="copy-right-area">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+        <div class="copy-right">
+          <p>Abhayam Foundation © 2020 
+		      <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=e22a5763da5b54a0bfa23e83b722a435ba462353'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/729976/t/5"></script>
+		  </p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+        <div class="social-media">
+          <ul>
+            <li><a href="https://www.facebook.com/groups/Abhayam.Group/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End Copyright --> 
+
+<!--Donate Popup-->
+
+<div class="modal fade pop-box" id="donate-popup" tabindex="-1" role="dialog" aria-labelledby="donate-popup" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content"> 
+      <!--Donation div-->
+      <div class="donation-div">
+        <div class="donation-plz">
+          <form method="post" action="contact.html">
+            
+            <!--Form Portlet-->
+            <div class="form-portlet">
+			<img src="img/works/support-now.jpg" alt=""><br>
+			  <br>
+              <h3></h3>
+
+               </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- /.modal-content --> 
+  </div>
+  <!-- /.modal-dialog --> 
+</div>
+
+<!-- END Donate Popup-->  
+
+<!-- Back to Top --> 
+<a href="#" id="back-to-top" title="Back to top"><img src="img/top-arrow.png" alt=""></a> 
+
+<!-- js file  --> 
+<script type="text/javascript" src="js/jquery.min.js"></script> 
+
+<!-- Bootstrap JS  --> 
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+
+<!-- Prettyphoto JS  --> 
+<script type="text/javascript" src="js/jquery.prettyphoto.js"></script> 
+
+<!-- Menu JS  --> 
+<script type="text/javascript" src="js/menuzord.js"></script> 
+
+<!-- OWL JS  --> 
+<script type="text/javascript" src="js/owl.js"></script> 
+
+<!--master slider--> 
+<script src="master-slider/js/masterslider.min.js"></script> 
+
+<!-- Easypiechart JS  --> 
+<script type="text/javascript" src="js/easypiechart.js"></script> 
+
+<!-- main js --> 
+<script type="text/javascript" src="js/main.js"></script> 
+
+<!-- REVOLUTION JS FILES --> 
+<script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script> 
+<script type="text/javascript" src="revolution/js/jquery.themepunch.revolution.min.js"></script> 
+<!-- SLIDER REVOLUTION 5.0 EXTENSIONS    --> 
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.actions.min.js"></script> 
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.carousel.min.js"></script> 
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.kenburn.min.js"></script> 
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.layeranimation.min.js"></script> 
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.migration.min.js"></script> 
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.navigation.min.js"></script> 
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.parallax.min.js"></script> 
+<script type="text/javascript" src="revolution/js/extensions/revolution.extension.slideanims.min.js"></script> 
+<script>
+	var tpj=jQuery;			
+					var revapi4;
+					tpj(document).ready(function() {
+						if(tpj("#rev_slider_4_1").revolution == undefined){
+							revslider_showDoubleJqueryError("#rev_slider_4_1");
+						}else{
+							revapi4 = tpj("#rev_slider_4_1").show().revolution({
+								sliderType:"standard",
+								jsFileLocation:"revolution/js/",
+								sliderLayout:"fullscreen",
+								dottedOverlay:"none",
+								delay:9000,
+								navigation: {
+									keyboardNavigation:"off",
+									keyboard_direction: "horizontal",
+									mouseScrollNavigation:"off",
+									onHoverStop:"off",
+									touch:{
+										touchenabled:"on",
+										swipe_threshold: 75,
+										swipe_min_touches: 1,
+										swipe_direction: "horizontal",
+										drag_block_vertical: false
+									}
+									,
+									arrows: {
+										style:"zeus",
+										enable:true,
+										hide_onmobile:true,
+										hide_under:600,
+										hide_onleave:true,
+										hide_delay:200,
+										hide_delay_mobile:1200,
+										tmp:'<div class="tp-title-wrap">  	<div class="tp-arr-imgholder"></div> </div>',
+										left: {
+											h_align:"left",
+											v_align:"center",
+											h_offset:30,
+											v_offset:0
+										},
+										right: {
+											h_align:"right",
+											v_align:"center",
+											h_offset:30,
+											v_offset:0
+										}
+									}
+									,
+									bullets: {
+										enable:true,
+										hide_onmobile:true,
+										hide_under:600,
+										style:"metis",
+										hide_onleave:true,
+										hide_delay:200,
+										hide_delay_mobile:1200,
+										direction:"horizontal",
+										h_align:"center",
+										v_align:"bottom",
+										h_offset:0,
+										v_offset:30,
+										space:5,
+						
+									}
+								},
+								viewPort: {
+									enable:true,
+									outof:"pause",
+									visible_area:"80%"
+								},
+								responsiveLevels:[1240,1024,778,480],
+								gridwidth:[1240,1024,778,480],
+								gridheight:[600,600,500,400],
+								lazyType:"none",
+								parallax: {
+									type:"mouse",
+									origo:"slidercenter",
+									speed:2000,
+									levels:[2,3,4,5,6,7,12,16,10,50],
+								},
+								shadow:0,
+								spinner:"off",
+								stopLoop:"off",
+								stopAfterLoops:-1,
+								stopAtSlide:-1,
+								shuffle:"off",
+								autoHeight:"off",
+								hideThumbsOnMobile:"off",
+								hideSliderAtLimit:0,
+								hideCaptionAtLimit:0,
+								hideAllCaptionAtLilmit:0,
+								debugMode:false,
+								fallbacks: {
+									simplifyAll:"off",
+									nextSlideOnWindowFocus:"off",
+									disableFocusListener:false,
+								}
+							});
+						}
+					});	/*ready*/
+</script>
+</body>
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh'},{'server':'sg2plcpnl0237'},{'dcenter':'sg2'},{'cp_id':'6381391'},{'cp_cache':''},{'cp_cl':'6'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src='https://img1.wsimg.com/traffic-assets/js/tccl.min.js'></script></html>
